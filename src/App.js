@@ -12,6 +12,7 @@ export default function App() {
         <a href="https://github.com/rockness-s/weather-app-react" target="_blank" rel="noreferrer">GitHub</a>
         </footer>
     </div>
+
   );
 }
 

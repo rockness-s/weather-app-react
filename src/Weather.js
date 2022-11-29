@@ -4,6 +4,19 @@ import './App.css';
 export default function Weather() {
     return(
     <div>
+        <form>
+            <div className='row'>
+                <div className='col-9'>
+                    <input type="search" placeholder='Enter a city...' className='form-control'/>
+                </div>
+                <div className='col-3'>
+                    <input type="submit" value="Search" className='btn btn-secondary'/>
+                    <button type='button' className='btn btn-secondary'>Home</button>
+                </div>
+                    
+            </div>
+        </form>
+
         <div className='main-section'>
             <div className='row'>
             <div className='col-8'>

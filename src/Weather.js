@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import FormattedDate from "./FormattedDate"
+
+import WeatherInfo from "./WeatherInfo";
 import './App.css';
 import './Weather.css';
 import axios from 'axios';
 
+
 export default function Weather(props) {
    let [weather, setWeather] = useState({ ready: false });
    function showResponse(response) {
-    console.log(response);
     setWeather({
         ready: true,
         city: response.data.city,
@@ -24,6 +25,7 @@ export default function Weather(props) {
    if (weather.ready) {
     return(
         <div className='weather-app'>
+           
             <form>
                 <div className='row'>
                     <div className='col-10'>
@@ -35,156 +37,11 @@ export default function Weather(props) {
                         
                 </div>
             </form>
-    
-            <div className='main-section'>
-                <div className='row'>
-                <div className='col-2 img-weather'>
-                    <img src={weather.icon} alt='weather icon'></img>
-                </div>
-                <div className='col-3 temp-section'>
-                    <ul>
-                        <li className='temp'>{Math.round(weather.temp)}°C</li>
-                        <li className='real-temp'>RealFeel: {Math.round(weather.realtemp)}°C</li>
-                    </ul>
-                </div>
-                <div className='col-7 city-info'>
-                <h1>{weather.city}</h1>
-                <p><FormattedDate date={weather.date} /></p>
-                </div>
-                </div>
-                <h4 className='text-capitalize'>{weather.descr}</h4>
-                <ul className='detail-item'>
-                <li>Wind: {Math.round(weather.wind)} km/h</li>
-                <li>Humidity: {weather.hum}%</li>
-                </ul>
-            </div>
-             <div className='forecast-section'>
-                <div className='row icons'>
-                <div className='col-2'></div>
-                <div className='col-3'></div>
-                <div className='col-2'>🌡️</div>
-                <div className='col-3'>💨</div>
-                <div className='col-2'>💧</div>
-                </div>
-                 <div className='row'>
-                     <div className='col-2'>
-                        <div>Tuesday</div>
-                        <div>29/11</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>img</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>2/0°C</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>27 km/h</div>
-                    </div>
-                    <div className='col-2'>
-                         <div>43%</div>
-                    </div>
-                    
-                </div>
-                <div className='row'>
-                     <div className='col-2'>
-                        <div>Tuesday</div>
-                        <div>29/11</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>img</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>2/0°C</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>27 km/h</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>43%</div>
-                    </div>
-                    
-                </div>
-                <div className='row'>
-                     <div className='col-2'>
-                        <div>Tuesday</div>
-                        <div>29/11</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>img</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>2/0°C</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>27 km/h</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>43%</div>
-                    </div>
-                    
-                </div>
-                <div className='row'>
-                     <div className='col-2'>
-                        <div>Tuesday</div>
-                        <div>29/11</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>img</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>2/0°C</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>27 km/h</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>43%</div>
-                    </div>
-                    
-                </div>
-                <div className='row'>
-                     <div className='col-2'>
-                        <div>Tuesday</div>
-                        <div>29/11</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>img</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>2/0°C</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>27 km/h</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>43%</div>
-                    </div>
-                    
-                </div>
-                <div className='row'>
-                     <div className='col-2'>
-                        <div>Tuesday</div>
-                        <div>29/11</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>img</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>2/0°C</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>27 km/h</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>43%</div>
-                    </div>
-                    
-                </div>
-             </div>
-    
+
+            <WeatherInfo data={weather} />
         </div>
     
-        )
+        );
    } else { 
 
     let apiKey = "01ce64btfcc913aa7034e9737a34of12";

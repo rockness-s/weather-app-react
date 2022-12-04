@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import Ftemp from "./Ftemp";
 
 export default function WeatherInfo(props) {
     return (
@@ -10,10 +11,7 @@ export default function WeatherInfo(props) {
                     <img src={props.data.icon} alt='weather icon'></img>
                 </div>
                 <div className='col-3 temp-section'>
-                    <ul>
-                        <li className='temp'>{Math.round(props.data.temp)}°C</li>
-                        <li className='real-temp'>RealFeel: {Math.round(props.data.realtemp)}°C</li>
-                    </ul>
+                    <Ftemp celsius={props.data.temp} realcelsius={props.data.realtemp} />
                 </div>
                 <div className='col-7 city-info'>
                 <h1>{props.data.city}</h1>
@@ -154,3 +152,5 @@ export default function WeatherInfo(props) {
         </div>
     )
 }
+
+// 

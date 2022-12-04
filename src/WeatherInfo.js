@@ -20,11 +20,13 @@ export default function WeatherInfo(props) {
                 <p><FormattedDate date={props.data.date} /></p>
                 </div>
                 </div>
+                <div className="details">
                 <h4 className='text-capitalize'>{props.data.descr}</h4>
                 <ul className='detail-item'>
                 <li>Wind: {Math.round(props.data.wind)} km/h</li>
                 <li>Humidity: {props.data.hum}%</li>
                 </ul>
+                </div>
              </div>
              <div className='forecast-section'>
                 <div className='row icons'>

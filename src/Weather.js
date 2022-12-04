@@ -37,11 +37,6 @@ export default function Weather(props) {
     
             <div className='main-section'>
                 <div className='row'>
-                <div className='col-7 city-info'>
-                <h1>{weather.city}</h1>
-                <h4 className='text-capitalize'>{weather.descr}</h4>
-                <p>{weather.data}</p>
-                </div>
                 <div className='col-2 img-weather'>
                     <img src={weather.icon} alt='weather icon'></img>
                 </div>
@@ -51,7 +46,12 @@ export default function Weather(props) {
                         <li className='real-temp'>RealFeel: {Math.round(weather.realtemp)}°C</li>
                     </ul>
                 </div>
+                <div className='col-7 city-info'>
+                <h1>{weather.city}</h1>
+                <p>{weather.data}</p>
                 </div>
+                </div>
+                <h4 className='text-capitalize'>{weather.descr}</h4>
                 <ul className='detail-item'>
                 <li>Wind: {Math.round(weather.wind)} km/h</li>
                 <li>Humidity: {weather.hum}%</li>

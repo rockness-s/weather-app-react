@@ -14,6 +14,8 @@ h1 {
 
 h4 {
     font-size: 20px !important;
+    text-align: left;
+    padding-left: 50px;
 }
 
 p {
@@ -30,7 +32,7 @@ footer {
 }
 
 .container {
-    margin: 80px 0 80px 0;
+margin-top: 10px;
 }
 
 .main-section, .forecast-section {
@@ -41,6 +43,10 @@ footer {
     margin-bottom: 10px;
     padding: 15px;
     }
+
+.main-section .row {
+    padding-left: 46px;
+}
 
 .city-info {
     position: relative;
@@ -69,8 +75,8 @@ footer {
 .detail-item {
     list-style: none;
     font-size: 14px;
-    text-align: right;
-    margin-right: 18px;
+    text-align: left;
+    padding-left: 50px;
 }
 
 .info-item {
@@ -79,6 +85,7 @@ footer {
 
 .forecast-section {
     padding: 10px 5px;
+    padding-left: 15px;
 }
 .forecast-section .row {
     margin: 15px 0;

@@ -2,6 +2,7 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import Ftemp from "./Ftemp";
 
+
 export default function WeatherInfo(props) {
     return (
         <div className="WeatherInfo">
@@ -26,129 +27,7 @@ export default function WeatherInfo(props) {
                 </ul>
                 </div>
              </div>
-             <div className='forecast-section'>
-                <div className='row icons'>
-                <div className='col-2'></div>
-                <div className='col-3'></div>
-                <div className='col-2'>🌡️</div>
-                <div className='col-3'>💨</div>
-                <div className='col-2'>💧</div>
-                </div>
-                 <div className='row'>
-                     <div className='col-2'>
-                        <div>Tuesday</div>
-                        <div>29/11</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>img</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>2/0°C</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>27 km/h</div>
-                    </div>
-                    <div className='col-2'>
-                         <div>43%</div>
-                    </div>
-                    
-                </div>
-                <div className='row'>
-                     <div className='col-2'>
-                        <div>Tuesday</div>
-                        <div>29/11</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>img</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>2/0°C</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>27 km/h</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>43%</div>
-                    </div>
-                    
-                </div>
-                <div className='row'>
-                     <div className='col-2'>
-                        <div>Tuesday</div>
-                        <div>29/11</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>img</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>2/0°C</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>27 km/h</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>43%</div>
-                    </div>
-                    
-                </div>
-                <div className='row'>
-                     <div className='col-2'>
-                        <div>Tuesday</div>
-                        <div>29/11</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>img</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>2/0°C</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>27 km/h</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>43%</div>
-                    </div>
-                    
-                </div>
-                <div className='row'>
-                     <div className='col-2'>
-                        <div>Tuesday</div>
-                        <div>29/11</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>img</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>2/0°C</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>27 km/h</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>43%</div>
-                    </div>
-                    
-                </div>
-                <div className='row'>
-                     <div className='col-2'>
-                        <div>Tuesday</div>
-                        <div>29/11</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>img</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>2/0°C</div>
-                    </div>
-                    <div className='col-3'>
-                        <div>27 km/h</div>
-                    </div>
-                    <div className='col-2'>
-                        <div>43%</div>
-                    </div>
-                    
-                </div>
-             </div>
+
         </div>
     )
 }

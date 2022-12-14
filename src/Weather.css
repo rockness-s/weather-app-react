@@ -103,6 +103,7 @@ margin-top: 10px;
     margin: 15px 0;
 }
 
-.icons {
-    margin-bottom: 0 !important;
+.forecast-date,
+.forecast-temp {
+    font-size: 14px;
 }

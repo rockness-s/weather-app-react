@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
-// import './Weather.css';
+import ForecastInfo from "./ForecastInfo";
 
 export default function Forecast(props) {
     let [loaded, setLoaded] = useState(false);
     let [forecast, setForecast] = useState(null);
 
     function showForecast(response) {
-        console.log(response.data.daily)
+        console.log(response.data)
         setLoaded(true);
         setForecast(response.data.daily)
     }
@@ -16,35 +16,9 @@ export default function Forecast(props) {
 
     if(loaded) {
         return (
-            <div className='forecast-section'>
-            <div className='row'>
-                    <div className='col-2'>
-                        <div className="fw-semibold text-decoration-underline">Tuesday</div>
-                        <div className="forecast-date">29/11</div>
-                        <div className="forecast-icon">
-                            <img src={forecast[0].condition.icon_url} 
-                            alt='forecast icon'></img></div>
-                        <div className="forecast-temp">
-                            <span className="fw-semibold">{Math.round(forecast[0].temperature.maximum)}</span>
-                            /{Math.round(forecast[0].temperature.minimum)}°C</div>
-                    </div>
-                    <div className='col-2'>
-    
-                    </div>
-                    <div className='col-2'>
-    
-                    </div>
-                    <div className='col-2'>
-    
-                    </div>
-                    <div className='col-2'>
-    
-                    </div>
-                    <div className='col-2'>
-    
-                    </div>
-                    </div>
-                    </div>
+            <div className="forecast"> 
+                <ForecastInfo data={forecast[0]} />
+            </div>
         )
 
     } else {

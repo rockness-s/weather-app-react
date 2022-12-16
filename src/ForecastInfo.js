@@ -33,35 +33,16 @@ export default function ForecastInfo(props) {
     
     return (
         <div className='forecast-section'>
-            <div className='row'>
-                    <div className='col-2'>
-                        <div className="fw-semibold text-decoration-underline">
-                            {day()}</div>
-                        <div className="forecast-date">{date()}</div>
-                        <div className="forecast-icon">
-                            <img src={props.data.condition.icon_url} 
-                            alt='forecast icon'></img></div>
-                        <div className="forecast-temp">
-                            <span className="fw-semibold">
-                                {maxTemp()}</span>
-                            /{minTemp()}°C</div>
-                    </div>
-                    <div className='col-2'>
-    
-                    </div>
-                    <div className='col-2'>
-    
-                    </div>
-                    <div className='col-2'>
-    
-                    </div>
-                    <div className='col-2'>
-    
-                    </div>
-                    <div className='col-2'>
-    
-                    </div>
-                    </div>
-                    </div>
+            <div className="fw-semibold text-decoration-underline">
+            {day()}</div>
+            <div className="forecast-date">{date()}</div>
+            <div className="forecast-icon">
+             <img src={props.data.condition.icon_url} 
+                     alt='forecast icon'></img></div>
+            <div className="forecast-temp">
+            <span className="fw-semibold">
+                     {maxTemp()}</span>
+                     /{minTemp()}°C</div>
+        </div>
     )
 }

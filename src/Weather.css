@@ -28,7 +28,7 @@ margin-top: 10px;
 }
 
 .main-section, .forecast-section {
-    background-color: rgb(247, 241, 241);
+    background-color: rgb(229, 229, 229);
   }
 
 .main-section{
@@ -79,6 +79,15 @@ margin-top: 10px;
     position: relative;
     bottom: 14px;
 }
+.temp-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+.temp-link:hover {
+    text-decoration: underline;
+}
 
 .detail-item {
     list-style: none;
@@ -110,7 +119,21 @@ margin-top: 10px;
 
 .forecast-icon img {
     position: relative;
-    left: -13px;
+    left: -7px;
     text-align: center;
     height: 65px;
+}
+ 
+@media(max-width: 500px) {
+    .forecast-icon img {
+        position: relative;
+        left: -14px;
+    }
+}
+
+@media(max-width: 770px) {
+    .forecast-icon img {
+        position: relative;
+        left: -12px;
+    }
 }

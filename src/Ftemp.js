@@ -19,8 +19,8 @@ export default function Ftemp(props) {
             <div>
                 <ul>
                     <li><span className='temp'>{Math.round(props.celsius)}</span>{" "} 
-                    <span className="unit">°C | 
-                    <a href="/" onClick={showF}>{" "}°F</a></span></li>
+                    <span className="unit">°C |{" "} 
+                    <a href="/" onClick={showF} className="temp-link">°F</a></span></li>
                     <li className='real-temp'>RealFeel: {" "}
                     {Math.round(props.realcelsius)}°C</li>
                 </ul>
@@ -34,7 +34,7 @@ export default function Ftemp(props) {
                 <ul>
                     <li><span className='temp'>{Math.round(fahrenheit)}</span>{" "}
                     <span className="unit">
-                    <a href="/" onClick={showC}>°C</a> | °F</span></li>
+                    <a href="/" onClick={showC} className="temp-link">°C</a> | °F</span></li>
                     <li className='real-temp'>RealFeel: {" "} 
                     {Math.round(fahrenheitReal)}°C</li>
                 </ul>

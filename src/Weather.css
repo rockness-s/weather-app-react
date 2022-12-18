@@ -28,7 +28,8 @@ margin-top: 10px;
 }
 
 .main-section, .forecast-section {
-    background-color: rgb(229, 229, 229);
+    background-color: rgb(240, 240, 240);
+    border-radius: 4px;
   }
 
 .main-section{

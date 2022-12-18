@@ -17,9 +17,6 @@ h4 {
 
 }
 
-p {
-    font-size: 10px !important;
-}
 
 footer {
     margin: 10px 0;
@@ -47,6 +44,10 @@ margin-top: 10px;
     position: relative;
     top: 45px;
     padding-right: 28px !important;
+}
+
+.date-weather {
+    font-size: 10px !important;
 }
 
 .temp-section ul {
